@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 https://maven.apache.org/xsd/xdoc-2.0.xsd">
+  <properties>
+    <title>Plexus Velocity Component</title>
+    <author email="olamy@codehaus.org">Olivier Lamy</author>
+  </properties>
+  <body>
+    <section name="Plexus Velocity Component">
+      <p>A component which provides <a href="http://velocity.apache.org/">Apache Velocity</a> templating engine
+      integration.</p>
+
+      <subsection name="Typical use">
+        <p>A typical use:
+        <source>
+VelocityContext context = new VelocityContext();
+VelocityComponent velocityComponent =  (DefaultVelocityComponent) lookup( VelocityComponent.ROLE );
+Template template = velocityComponent.getEngine().getTemplate( "path to your template" );
+StringWriter writer = new StringWriter();
+template.merge( context, writer );</source>
+        </p>
+      </subsection>
+      <subsection name="Typical Configuration">
+        <p>Plexus Velocity Component comes with a default configuration: it is
+        expected to be customized to match local specific need. This is done by hand writing a
+        <code>META-INF/plexus/components.xml</code> Plexus descriptor.</p>
+        <p>A typical component configuration:
+        <source>
+<![CDATA[    <component>
+      <role>org.codehaus.plexus.velocity.VelocityComponent</role>
+      <implementation>org.codehaus.plexus.velocity.DefaultVelocityComponent</implementation>
+      <configuration>
+        <properties>
+          <property>
+            <name>resource.loader</name>
+            <value>classpath</value>
+          </property>
+          <property>
+            <name>classpath.resource.loader.class</name>
+            <value>org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader</value>
+          </property>
+        </properties>
+      </configuration>
+    </component>]]></source>
+        </p>
+        <p>See <a href="http://velocity.apache.org/engine/releases/velocity-1.7/developer-guide.html#Velocity_Configuration_Keys_and_Values">Velocity Configuration Keys and Values</a>
+        reference documentation for details on available configurations.</p>
+      </subsection>
+    </section>
+  </body>
+</document>

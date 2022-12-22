@@ -1,0 +1,7 @@
+
+org.apache.velocity velocity jar s/.*/debian/ * *
+org.codehaus.plexus plexus-container-default jar s/.*/1.5.5/ * *
+org.codehaus.plexus plexus-velocity jar s/.*/debian/ * *
+commons-collections commons-collections * s/3\..*/3.x/ * *
+s/velocity/org.apache.velocity/ * * s/.*/debian/ * *
+junit junit * s/.*/4.x/ * *

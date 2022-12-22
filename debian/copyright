@@ -1,0 +1,20 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Plexus Velocity Component
+Source: https://github.com/codehaus-plexus/plexus-velocity
+
+Files: *
+Copyright: 2001-2006 Codehaus Foundation
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2007 Trygve Laugstol
+           2011, Torsten Werner <Torsten Werner <twerner@debian.org>>
+License: GPL-2
+
+License: Apache-2.0
+  On Debian GNU/Linux system you can find the complete text of the
+  Apache-2.0 license in '/usr/share/common-licenses/Apache-2.0'
+
+License: GPL-2
+  On Debian GNU/Linux system you can find the complete text of the
+  GPL-2 license in '/usr/share/common-licenses/GPL-2'

@@ -1,0 +1,106 @@
+plexus-velocity (1.2-3.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 19:13:31 +0100
+
+plexus-velocity (1.2-3) unstable; urgency=medium
+
+  * Added the missing build dependency on junit4 (Closes: #869646)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 25 Jul 2017 14:19:52 +0200
+
+plexus-velocity (1.2-2) unstable; urgency=medium
+
+  * Depend on plexus-container-default1.5 instead of plexus-container-default
+  * Standards-Version updated to 4.0.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Jul 2017 23:36:16 +0200
+
+plexus-velocity (1.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Build with the DH sequencer instead of CDBS
+  * Moved the package to Git
+  * Standards-Version updated to 3.9.8
+  * Switch to debhelper level 10
+  * debian/watch: Track and download the new releases on GitHub
+  * Updated the Homepage field
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 30 Oct 2016 23:20:26 +0100
+
+plexus-velocity (1.1.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Switched the build dependency on Commons Collections to 3.x
+  * debian/control:
+    - Updated Standards-Version to 3.9.4 (no changes)
+    - Removed Michael Koch from the uploaders (Closes: #654128)
+    - Use canonical URLs for the Vcs-* fields
+  * debian/copyright: Updated the Format URI
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 06 Aug 2013 10:56:03 +0200
+
+plexus-velocity (1.1.7-5) unstable; urgency=low
+
+  * Team upload.
+  * Ignore test failures because commons-collections 3.x is needed somehow.
+    (Closes: #643555)
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 29 Sep 2011 22:00:48 +0200
+
+plexus-velocity (1.1.7-4) unstable; urgency=low
+
+  * Team upload.
+  * Remove Trygve and Paul from Uploaders list.
+  * Switch to debhelper level 7.
+  * Update Standards-Version: 3.9.1.
+  * Switch to source format 3.0.
+  * Change Depends: classpath-doc to default-jdk-doc. (Closes: #567290)
+  * Use Maven to build the package.
+  * Regenerate debian/copyright.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 28 Aug 2011 23:07:08 +0200
+
+plexus-velocity (1.1.7-3) unstable; urgency=low
+
+  * Add Build-Depends on openjdk-6-doc (Closes: #543116)
+  * Build-Depends on default-jdk instead of default-jdk-builddep,
+    as gcj is not used
+  * Bump up Standards-Version to 3.8.3, no change
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Wed, 02 Sep 2009 22:18:48 +0100
+
+plexus-velocity (1.1.7-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 09 Aug 2009 23:48:11 +0200
+
+plexus-velocity (1.1.7-1) experimental; urgency=low
+
+  [ Ludovic Claude ]
+  * New upstream version, added myself to Uploaders.
+  * Change section to java, bump Standards-Version to 3.8.1
+  * Add the Maven POM to the package,
+  * Add a Build-Depends-Indep dependency on maven-repo-helper
+  * Replace build dependency on java-gcj-compat-dev by default-jdk
+  * Use mh_installpom and mh_installjar to install the POM and the jar to the
+    Maven repository
+  * Add libcommons-collections-java, libplexus-containers-java, velocity
+    to Depends: for the binary package
+
+  [ Michael Koch ] 
+  * Added watch file.
+  * Added myself to Uploaders.
+  * Added Homepage, Vcs-Svn and Vcs-Browser fields.
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Tue, 24 Mar 2009 23:43:12 +0000
+
+plexus-velocity (1.1.6-1) unstable; urgency=low
+
+  * Initial release. (Closes: #426227)
+
+ -- Paul Cager <paul-debian@home.paulcager.org>  Tue, 12 Jun 2007 23:57:35 +0100
+

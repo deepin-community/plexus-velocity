@@ -1,0 +1,52 @@
+<component-set>
+  <components>
+    <component>
+      <role>org.codehaus.plexus.velocity.VelocityComponent</role>
+      <role-hint>default</role-hint>
+      <implementation>org.codehaus.plexus.velocity.DefaultVelocityComponent</implementation>
+      <configuration>
+        <properties>
+          <property>
+            <name>resource.loader</name>
+            <value>classpath,file</value>
+          </property>
+          <property>
+            <name>classpath.resource.loader.class</name>
+            <value>org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader</value>
+          </property>
+          <property>
+            <name>file.resource.loader.class</name>
+            <value>org.apache.velocity.runtime.resource.loader.FileResourceLoader</value>
+          </property>
+          <property>
+            <name>file.resource.loader.path</name>
+            <!-- This space intended! Actually Velocity expects an empty string but
+                 Plexus/XStream choke on it and skip the remaining configuration.
+                 Luckily, Plexus/XStream trim strings and we achieve the desired effect. -->
+            <value> </value>
+          </property>
+          <property>
+            <name>runtime.log.invalid.references</name>
+            <value>false</value>
+          </property>
+          <property>
+            <name>velocimacro.messages.on</name>
+            <value>false</value>
+          </property>
+          <property>
+            <name>resource.manager.logwhenfound</name>
+            <value>false</value>
+          </property>
+          <property>
+            <name>eventhandler.include.class</name>
+            <value>org.apache.velocity.app.event.implement.IncludeRelativePath</value>
+          </property>
+          <property>
+            <name>velocimacro.permissions.allow.inline.to.replace.global</name>
+            <value>true</value>
+          </property>
+        </properties>
+      </configuration>
+    </component>
+  </components>
+</component-set>
